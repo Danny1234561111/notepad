@@ -1,6 +1,9 @@
 <template>
   <div class="app">
     <div class="note-list">
+      <div class="add-button-container2">
+        <button @click="retry()" class="add-button">Сброс</button>
+      </div>
       <div class="add-button-container">
         <button @click="handlePlusClick()" class="add-button">+</button>
       </div>
@@ -47,6 +50,10 @@ export default {
       }
       this.editingTask = null;
       this.editingIndex = null;
+    },
+    retry(){
+      localStorage.setItem('users',JSON.stringify([]))
+      this.users=[]
     },
     closeKart() {
       this.showKart = false;
@@ -126,6 +133,11 @@ export default {
   top: 10px;
   right: 10px;
 }
+.add-button-container2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
 .add-button {
   padding: 10px 15px;
@@ -136,6 +148,7 @@ export default {
   border-radius: 5px;
   cursor: pointer;
 }
+
 
 .notes {
   flex: 1;
