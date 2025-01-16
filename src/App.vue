@@ -151,6 +151,7 @@ export default {
 
 
 .notes {
+  margin-top:30px;
   flex: 1;
   overflow-y: auto;
   padding: 10px;
