@@ -54,6 +54,7 @@ export default {
     retry(){
       localStorage.setItem('users',JSON.stringify([]))
       this.users=[]
+      this.closeKart()
     },
     closeKart() {
       this.showKart = false;
